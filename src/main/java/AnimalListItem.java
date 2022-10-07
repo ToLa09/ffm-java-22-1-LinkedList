@@ -23,6 +23,6 @@ public class AnimalListItem {
         return "AnimalListItem{\n" +
                 "value=" + value +
                 ", next=" + next +
-                "\n}";
+                "}";
     }
 }

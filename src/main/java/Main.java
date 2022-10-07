@@ -6,9 +6,8 @@ public class Main {
         Animal bear = new Animal("Bär");
         Animal snake = new Animal("Schlange");
 
-        AnimalList meineTierliste = new AnimalList(new ArrayList<>());
+        AnimalList meineTierliste = new AnimalList(tiger);
 
-        meineTierliste.add(tiger);
         System.out.println("-------------\nnur Tiger: \n" + meineTierliste);
 
         meineTierliste.add(bear);
@@ -17,8 +16,6 @@ public class Main {
         meineTierliste.add(snake);
         System.out.println("-------------\ndrei Tiere: \n" + meineTierliste);
 
-        System.out.println("-------------\n" + meineTierliste.getAnimalListItemByIndex(1));
-        System.out.println("-------------\n" + meineTierliste.getAnimalListByFirstItem());
 
         meineTierliste.add(bear);
         meineTierliste.add(snake);
@@ -26,10 +23,15 @@ public class Main {
         meineTierliste.add(tiger);
         meineTierliste.add(bear);
 
-        System.out.println("-------------\n" + meineTierliste);
-        meineTierliste.remove(tiger);
-        System.out.println("-------------\n" + meineTierliste);
-        System.out.println("-------------\n" + meineTierliste.getAnimalListByFirstItem());
 
+        System.out.println("-------------\nmehr Tiere: \n" + meineTierliste);
+
+        meineTierliste.remove(tiger);
+
+        System.out.println("-------------\nweniger Tiere: \n" + meineTierliste);
+
+        //meineTierliste.removeAllAnimalsOfType(snake);
+
+        System.out.println("-------------\nweniger Tiere: \n" + meineTierliste);
     }
 }
