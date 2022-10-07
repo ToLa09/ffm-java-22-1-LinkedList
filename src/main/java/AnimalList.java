@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class AnimalList {
     private AnimalListItem head;
 
@@ -36,6 +33,25 @@ public class AnimalList {
             AnimalListItem newNext = itemBeforeRemove.getNext().getNext();
             itemBeforeRemove.setNext(newNext);
         } else itemBeforeRemove.setNext(null);
+    }
+
+    public void removeAllAnimalsOfType(Animal animal) {
+        int numberOfAnimal = countAnimal(animal);
+        for (int i = 0; i < numberOfAnimal; i++) {
+            this.remove(animal);
+        }
+    }
+
+    public int countAnimal(Animal animal) {
+        AnimalListItem current = this.head;
+        int counter = 0;
+        while (current.getNext() != null) {
+            current = current.getNext();
+            if (current.getValue() == animal) {
+                counter +=1;
+            }
+        }
+        return counter;
     }
 
     @Override

@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
         Animal tiger = new Animal("Tiger");
@@ -26,11 +24,11 @@ public class Main {
 
         System.out.println("-------------\nmehr Tiere: \n" + meineTierliste);
 
-        meineTierliste.remove(tiger);
+        meineTierliste.removeAllAnimalsOfType(tiger);
 
         System.out.println("-------------\nweniger Tiere: \n" + meineTierliste);
 
-        //meineTierliste.removeAllAnimalsOfType(snake);
+        meineTierliste.removeAllAnimalsOfType(snake);
 
         System.out.println("-------------\nweniger Tiere: \n" + meineTierliste);
     }
